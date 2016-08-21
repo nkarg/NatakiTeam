@@ -1,0 +1,141 @@
+@import url('http://fonts.googleapis.com/css?family=Architects+Daughter:400,300');
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'FontAwesome', sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+  }
+  
+  body {
+    background: #39393D;
+  }
+
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #ECEEFF;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+input[type='text'], input[type='email'], input[type='password'], textarea, select {
+  background: rgba(148, 148, 158, .1);
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #E2E7F2;
+  color: #8A97A0;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  margin-bottom: 30px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-top: 2px solid #D2D9DD;
+}
+
+input[type='text']:focus, input[type='email']:focus, input[type='password']:focus {
+  background: #D2DCEC;
+  border-radius: 30px;
+}
+
+textarea {
+  background: #D2DCEC;
+}
+
+input[type='radio'], input[type='checkbox'] {
+  margin: 0 4px 8px 0;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  position: relative;
+  display: block;
+  padding: 19px 39px 18px 39px;
+  color: #2B2D40;
+  margin: 0 auto;
+  background: #1ABCE1;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  width: 100%;
+  border: 2px solid #1ABCE1;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: .4s;
+}
+
+button:hover {
+  color: #1ABCE1;
+  width: 80%;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px dotted #1ABCE1;
+  border-color: #1ABCE1;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background: #0e89a5;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 8px 50px 8px 50px;
+}
+
+@media screen and (min-width: 480px) {form {max-width: 480px}}
+@media screen and (min-width: 1024px) {
+  form {max-width: 960px}
+  fieldset {
+    position: relative;
+    float: left;
+    width: 45%;
+  }
+
+  fieldset.profile {
+    width: 54%;
+    float: right;
+  }
+}

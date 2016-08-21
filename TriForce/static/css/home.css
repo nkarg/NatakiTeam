@@ -1,0 +1,228 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url(http://i.imgur.com/ihDBGCs.png), radial-gradient(#ffffff, #d1d1d1);
+  overflow: hidden;
+  font-size: 120px;
+}
+body * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+}
+
+@keyframes switch1 {
+  from {
+    visibility: visible;
+  }
+  60%, to {
+    visibility: hidden;
+  }
+}
+@keyframes switch2 {
+  from, 60% {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+@keyframes cube {
+  from, 60% {
+    transform: rotateX(-35deg) rotateY(-45deg);
+  }
+  95%, to {
+    transform: rotateX(145deg) rotateY(225deg);
+  }
+}
+.cube {
+  animation: cube 3s ease-in-out infinite, switch2 3s infinite;
+}
+.cube .face {
+  width: 1em;
+  height: 1em;
+  margin: -.5em 0 0 -.5em;
+}
+.cube .face:nth-child(1) {
+  background: #ef4239;
+  transform: rotate3d(1, -1, 1, 0deg) rotateY(0deg) translateZ(0.5em);
+}
+.cube .face:nth-child(2) {
+  background: #ffad10;
+  transform: rotate3d(1, -1, 1, 120deg) rotateY(0deg) translateZ(0.5em);
+}
+.cube .face:nth-child(3) {
+  background: #21a5ad;
+  transform: rotate3d(1, -1, 1, 240deg) rotateY(0deg) translateZ(0.5em);
+}
+.cube .face:nth-child(4) {
+  background: #ef4239;
+  transform: rotate3d(1, -1, 1, 360deg) rotateY(180deg) translateZ(0.5em);
+}
+.cube .face:nth-child(5) {
+  background: #ffad10;
+  transform: rotate3d(1, -1, 1, 480deg) rotateY(180deg) translateZ(0.5em);
+}
+.cube .face:nth-child(6) {
+  background: #21a5ad;
+  transform: rotate3d(1, -1, 1, 600deg) rotateY(180deg) translateZ(0.5em);
+}
+
+.thing {
+  animation: switch1 3s infinite;
+}
+.thing .tri {
+  width: 1em;
+  height: 0.86603em;
+  margin: -0.57735em 0 0 -0.5em;
+  transform-origin: 50% 66.66667%;
+  overflow: hidden;
+}
+.thing .tri:before, .thing .tri:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  transform: translateY(0.5em) scaleY(1.73205) scale(0.70711) rotate(45deg);
+  background: currentColor;
+}
+.thing .tri:after {
+  display: none;
+}
+@keyframes tri0 {
+  from {
+    transform: rotate(30deg) scale(0.81915) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  17.5% {
+    transform: rotate(30deg) scale(0.81915) translateY(83.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  35%, 40% {
+    transform: rotate(60deg) scale(1.41421) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(60deg);
+  }
+  60%, to {
+    transform: rotate(60deg) scale(1.41421) translateY(33.33333%) rotateX(70.52878deg) translateY(33.33333%) rotate(60deg);
+  }
+}
+.thing .tri:nth-child(1) {
+  color: #ef4239;
+  animation: tri0 3s ease-in-out infinite;
+}
+@keyframes tri1 {
+  from {
+    transform: rotate(90deg) scale(0.81915) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  17.5% {
+    transform: rotate(90deg) scale(0.81915) translateY(83.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  35%, 40% {
+    transform: rotate(60deg) scale(1.41421) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(-60deg);
+  }
+  60%, to {
+    transform: rotate(60deg) scale(1.41421) translateY(33.33333%) rotateX(70.52878deg) translateY(33.33333%) rotate(-60deg);
+  }
+}
+.thing .tri:nth-child(2) {
+  color: #ef4239;
+  animation: tri1 3s ease-in-out infinite;
+}
+@keyframes tri2 {
+  from {
+    transform: rotate(150deg) scale(0.81915) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  17.5% {
+    transform: rotate(150deg) scale(0.81915) translateY(83.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  35%, 40% {
+    transform: rotate(180deg) scale(1.41421) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(60deg);
+  }
+  60%, to {
+    transform: rotate(180deg) scale(1.41421) translateY(33.33333%) rotateX(70.52878deg) translateY(33.33333%) rotate(60deg);
+  }
+}
+.thing .tri:nth-child(3) {
+  color: #ffad10;
+  animation: tri2 3s ease-in-out infinite;
+}
+@keyframes tri3 {
+  from {
+    transform: rotate(210deg) scale(0.81915) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  17.5% {
+    transform: rotate(210deg) scale(0.81915) translateY(83.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  35%, 40% {
+    transform: rotate(180deg) scale(1.41421) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(-60deg);
+  }
+  60%, to {
+    transform: rotate(180deg) scale(1.41421) translateY(33.33333%) rotateX(70.52878deg) translateY(33.33333%) rotate(-60deg);
+  }
+}
+.thing .tri:nth-child(4) {
+  color: #ffad10;
+  animation: tri3 3s ease-in-out infinite;
+}
+@keyframes tri4 {
+  from {
+    transform: rotate(270deg) scale(0.81915) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  17.5% {
+    transform: rotate(270deg) scale(0.81915) translateY(83.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  35%, 40% {
+    transform: rotate(300deg) scale(1.41421) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(60deg);
+  }
+  60%, to {
+    transform: rotate(300deg) scale(1.41421) translateY(33.33333%) rotateX(70.52878deg) translateY(33.33333%) rotate(60deg);
+  }
+}
+.thing .tri:nth-child(5) {
+  color: #21a5ad;
+  animation: tri4 3s ease-in-out infinite;
+}
+@keyframes tri5 {
+  from {
+    transform: rotate(330deg) scale(0.81915) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  17.5% {
+    transform: rotate(330deg) scale(0.81915) translateY(83.33333%) rotateX(0deg) translateY(33.33333%) rotate(0deg);
+  }
+  35%, 40% {
+    transform: rotate(300deg) scale(1.41421) translateY(33.33333%) rotateX(0deg) translateY(33.33333%) rotate(-60deg);
+  }
+  60%, to {
+    transform: rotate(300deg) scale(1.41421) translateY(33.33333%) rotateX(70.52878deg) translateY(33.33333%) rotate(-60deg);
+  }
+}
+.thing .tri:nth-child(6) {
+  color: #21a5ad;
+  animation: tri5 3s ease-in-out infinite;
+}
+@keyframes tri6 {
+  from, 40% {
+    opacity: 0;
+  }
+  60%, to {
+    opacity: 1;
+  }
+}
+.thing .tri:nth-child(7) {
+  transform: scale(1.43421) rotate(180deg);
+  animation: tri6 3s ease-in-out infinite;
+}
+.thing .tri:nth-child(7):before {
+  background: linear-gradient(225deg, rgba(33, 165, 173, 0) 50%, #21a5ad 50%), linear-gradient(-26.56505deg, rgba(239, 66, 57, 0) 66.66667%, #ef4239 66.66667%) #ffad10;
+}
+.thing .tri:nth-child(7):after {
+  display: block;
+  bottom: -0.71132em;
+  left: -.5em;
+  background: #ffad10;
+  transform-origin: top right;
+  transform: rotate(-30deg);
+}
